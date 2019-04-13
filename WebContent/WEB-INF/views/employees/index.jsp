@@ -23,7 +23,7 @@
                     <th>操作</th>
                 </tr>
 
-                <c:forEach var="employee" items="${employee}" varStatus="status">
+                <c:forEach var="employee" items="${employees}" varStatus="status">
                     <tr class="row${status.count % 2}">
                     <td><c:out value="${employee.code}" /></td>
                     <td><c:out value="${employee.name}" /></td>
@@ -55,7 +55,7 @@
             </c:choose>
         </c:forEach>
     </div><
-    <p><a href="<c:url value='/employees/new' />">新規従業員の登録です</a></p>
+    <p><a href="<c:url value='/employees/new' />">新規従業員の登録をするよ</a></p>
 
     </c:param>
 </c:import>
