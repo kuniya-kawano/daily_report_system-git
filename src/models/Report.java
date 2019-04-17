@@ -21,6 +21,10 @@ import javax.persistence.Table;
                 name = "getAllReports",
                 query = "SELECT r FROM Report AS r ORDER BY r.id DESC"
                 ),
+        @NamedQuery(
+                name = "getReportsCount",
+                query = "SELECT COUNT(r) FROM Report AS r"
+                ),
 })
 
 @Entity
@@ -94,6 +98,10 @@ public class Report {
 
     public Timestamp getCreated_at() {
         return created_at;
+    }
+
+    public void setCreated_at(Timestamp created_at) {
+        this.created_at = created_at;
     }
 
     public Timestamp getUpdated_at() {
